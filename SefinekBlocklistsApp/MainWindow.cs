@@ -1,5 +1,6 @@
 using Microsoft.Web.WebView2.Core;
 using Newtonsoft.Json;
+using SefinekBlocklistsApp.Models;
 using SefinekBlocklistsApp.Scripts;
 
 namespace SefinekBlocklistsApp;
