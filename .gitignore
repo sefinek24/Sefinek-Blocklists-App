@@ -1,10 +1,19 @@
 .vs
 .idea
 
-SefinekBlocklistsApp/bin/Debug
-SefinekBlocklistsApp/obj/Debug
+SefinekBlocklistsApp/bin
 
-SefinekBlocklistsApp/bin/Release
+SefinekBlocklistsApp/obj/Debug
 SefinekBlocklistsApp/obj/Release
+SefinekBlocklistsApp/obj/x86
+
 
 SefinekBlocklistsApp/obj/project.nuget.cache
+
+
+WinAppPackagingProject/bin
+WinAppPackagingProject/obj/Debug
+WinAppPackagingProject/obj/Release
+WinAppPackagingProject/obj/x86
+WinAppPackagingProject/obj/project.nuget.cache
+WinAppPackagingProject/AppPackages
