@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             ((System.ComponentModel.ISupportInitialize)webView21).BeginInit();
             SuspendLayout();
@@ -38,24 +39,18 @@
             webView21.BackColor = Color.Black;
             webView21.CreationProperties = null;
             webView21.DefaultBackgroundColor = Color.White;
-            webView21.Dock = DockStyle.Fill;
+            resources.ApplyResources(webView21, "webView21");
             webView21.ForeColor = Color.White;
-            webView21.Location = new Point(0, 0);
             webView21.Name = "webView21";
-            webView21.Size = new Size(1758, 907);
-            webView21.TabIndex = 0;
             webView21.ZoomFactor = 1D;
             // 
             // MainWindow
             // 
-            AutoScaleDimensions = new SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Black;
-            ClientSize = new Size(1758, 907);
             Controls.Add(webView21);
             Name = "MainWindow";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Sefinek Blocklists";
             Load += MainWindow_Load;
             ((System.ComponentModel.ISupportInitialize)webView21).EndInit();
             ResumeLayout(false);
