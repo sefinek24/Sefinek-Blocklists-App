@@ -1,3 +1,5 @@
+using SefinekBlocklistsApp.Scripts;
+
 namespace SefinekBlocklistsApp;
 
 internal static class Program
@@ -8,12 +10,19 @@ internal static class Program
     [STAThread]
     private static void Main()
     {
-        Initialize();
+        InitializeApplication();
 
-        Application.Run(new MainWindow());
+        try
+        {
+            Application.Run(new MainWindow());
+        }
+        catch (Exception ex)
+        {
+            Utils.ShowErrorMessage($"Sorry, but something went wrong.\n\n{ex.Message}");
+        }
     }
 
-    private static void Initialize()
+    private static void InitializeApplication()
     {
         ApplicationConfiguration.Initialize();
         Application.SetHighDpiMode(HighDpiMode.SystemAware);

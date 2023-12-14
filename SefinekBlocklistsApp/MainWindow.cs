@@ -1,10 +1,14 @@
 using Microsoft.Web.WebView2.Core;
+using Newtonsoft.Json;
+using SefinekBlocklistsApp.Scripts;
 
 namespace SefinekBlocklistsApp;
 
 public partial class MainWindow : Form
 {
-    private readonly string _appData = Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Sefinek Blocklists");
+    private static readonly string AppData = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Sefinek Blocklists");
+    private static readonly string JsonFilePath = Path.Combine(AppData, "settings.json");
+    private static readonly string DefaultUrl = "https://sefinek.net/blocklist-generator";
 
     public MainWindow()
     {
@@ -15,15 +19,66 @@ public partial class MainWindow : Form
     {
         webView21.CoreWebView2InitializationCompleted += WebView_CoreWebView2InitializationCompleted;
 
-        CoreWebView2Environment webView2Environment = await CoreWebView2Environment.CreateAsync(null, _appData).ConfigureAwait(false);
+        CoreWebView2Environment webView2Environment = await CoreWebView2Environment.CreateAsync(null, AppData).ConfigureAwait(false);
         await webView21.EnsureCoreWebView2Async(webView2Environment).ConfigureAwait(false);
+
+        webView21.NavigationCompleted += WebView_NavigationCompleted;
     }
 
     private void WebView_CoreWebView2InitializationCompleted(object? sender, CoreWebView2InitializationCompletedEventArgs e)
     {
         if (e.IsSuccess)
-            webView21.Source = new Uri("https://sefinek.net/blocklist-generator");
+            try
+            {
+                if (File.Exists(JsonFilePath))
+                {
+                    string file = File.ReadAllText(JsonFilePath);
+                    Settings? settings = JsonConvert.DeserializeObject<Settings>(file);
+
+                    if (settings != null && !string.IsNullOrEmpty(settings.CurrentUrl))
+                        webView21.Source = new Uri(settings.CurrentUrl);
+                    else
+                        webView21.Source = new Uri(DefaultUrl);
+                }
+                else
+                {
+                    Settings defaultSettings = new()
+                    {
+                        CurrentUrl = DefaultUrl
+                    };
+                    string defaultJson = JsonConvert.SerializeObject(defaultSettings, Formatting.Indented);
+                    File.WriteAllText(JsonFilePath, defaultJson);
+
+                    webView21.Source = new Uri(DefaultUrl);
+                }
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowErrorMessage($@"Error: {ex.Message}");
+            }
         else
-            MessageBox.Show(@"Failed to load WebView2.");
+            Utils.ShowErrorMessage(@"Failed to load WebView2.");
+    }
+
+    private void WebView_NavigationCompleted(object? sender, CoreWebView2NavigationCompletedEventArgs e)
+    {
+        if (e.IsSuccess)
+            SaveCurrentUrlToJson(webView21.Source.ToString());
+        else
+            Utils.ShowErrorMessage(@"Failed to load the web page.");
+    }
+
+    private static void SaveCurrentUrlToJson(string url)
+    {
+        try
+        {
+            var urlObject = new { CurrentUrl = url };
+            string json = JsonConvert.SerializeObject(urlObject);
+            File.WriteAllText(JsonFilePath, json);
+        }
+        catch (Exception ex)
+        {
+            Utils.ShowErrorMessage(@$"Error while saving current URL to JSON: {ex.Message}");
+        }
     }
 }
