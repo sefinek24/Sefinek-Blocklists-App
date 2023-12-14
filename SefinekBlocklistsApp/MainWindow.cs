@@ -9,9 +9,8 @@ public partial class MainWindow : Form
     public MainWindow()
     {
         InitializeComponent();
-        
     }
-    
+
     private async void MainWindow_Load(object sender, EventArgs e)
     {
         webView21.CoreWebView2InitializationCompleted += WebView_CoreWebView2InitializationCompleted;
@@ -19,7 +18,6 @@ public partial class MainWindow : Form
         CoreWebView2Environment webView2Environment = await CoreWebView2Environment.CreateAsync(null, _appData).ConfigureAwait(false);
         await webView21.EnsureCoreWebView2Async(webView2Environment).ConfigureAwait(false);
     }
-
 
     private void WebView_CoreWebView2InitializationCompleted(object? sender, CoreWebView2InitializationCompletedEventArgs e)
     {
