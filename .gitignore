@@ -1,0 +1,10 @@
+.vs
+.idea
+
+SefinekBlocklistsApp/bin/Debug
+SefinekBlocklistsApp/obj/Debug
+
+SefinekBlocklistsApp/bin/Release
+SefinekBlocklistsApp/obj/Release
+
+SefinekBlocklistsApp/obj/project.nuget.cache
