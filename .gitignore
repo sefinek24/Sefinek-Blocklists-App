@@ -16,4 +16,4 @@ WinAppPackagingProject/obj/Release
 WinAppPackagingProject/obj/x86
 WinAppPackagingProject/obj/project.nuget.cache
 WinAppPackagingProject/AppPackages
-
+WinAppPackagingProject/BundleArtifacts/neutral.txt
