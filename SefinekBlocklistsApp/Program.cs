@@ -1,13 +1,9 @@
-using System.Runtime.InteropServices;
 using SefinekBlocklistsApp.Scripts;
 
 namespace SefinekBlocklistsApp;
 
 internal static class Program
 {
-    [DllImport("user32.dll")]
-    private static extern bool SetProcessDpiAwarenessContext(IntPtr dpiContext);
-
     /// <summary>
     ///     The main entry point for the application.
     /// </summary>
@@ -28,9 +24,7 @@ internal static class Program
 
     private static void InitializeApplication()
     {
-        SetProcessDpiAwarenessContext(new IntPtr(-4));
-
         ApplicationConfiguration.Initialize();
-        // Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
+        Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
     }
 }

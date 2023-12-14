@@ -1,0 +1,6 @@
+MainPackage=C:\GitHub\VS\Other\Sefinek-Blocklists-App\WinAppPackagingProject\bin\AnyCPU\Release\WinAppPackagingProject_1.0.5.0_AnyCPU.msix
+SymbolPackage=C:\GitHub\VS\Other\Sefinek-Blocklists-App\WinAppPackagingProject\obj\Release\Symbols\WinAppPackagingProject_1.0.5.0_AnyCPU.appxsym
+ResourcePack=C:\GitHub\VS\Other\Sefinek-Blocklists-App\WinAppPackagingProject\bin\AnyCPU\Release\WinAppPackagingProject_1.0.5.0_scale-100.msix
+ResourcePack=C:\GitHub\VS\Other\Sefinek-Blocklists-App\WinAppPackagingProject\bin\AnyCPU\Release\WinAppPackagingProject_1.0.5.0_scale-125.msix
+ResourcePack=C:\GitHub\VS\Other\Sefinek-Blocklists-App\WinAppPackagingProject\bin\AnyCPU\Release\WinAppPackagingProject_1.0.5.0_scale-150.msix
+ResourcePack=C:\GitHub\VS\Other\Sefinek-Blocklists-App\WinAppPackagingProject\bin\AnyCPU\Release\WinAppPackagingProject_1.0.5.0_scale-400.msix

@@ -6,8 +6,7 @@ SefinekBlocklistsApp/bin
 SefinekBlocklistsApp/obj/Debug
 SefinekBlocklistsApp/obj/Release
 SefinekBlocklistsApp/obj/x86
-
-
+SefinekBlocklistsApp/obj/wappublish/win-x86/project.nuget.cache
 SefinekBlocklistsApp/obj/project.nuget.cache
 
 
@@ -17,3 +16,4 @@ WinAppPackagingProject/obj/Release
 WinAppPackagingProject/obj/x86
 WinAppPackagingProject/obj/project.nuget.cache
 WinAppPackagingProject/AppPackages
+
