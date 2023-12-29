@@ -1,3 +1,4 @@
+using SefinekBlocklistsApp.Properties;
 using SefinekBlocklistsApp.Scripts;
 
 namespace SefinekBlocklistsApp;
@@ -14,7 +15,7 @@ internal static class Program
 
         try
         {
-            Application.Run(new MainWindow());
+            Application.Run(new MainWindow { Icon = Resources.icon });
         }
         catch (Exception ex)
         {
