@@ -42,7 +42,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -87,7 +87,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -132,7 +132,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -177,7 +177,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -222,7 +222,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -267,7 +267,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -312,7 +312,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -357,7 +357,7 @@
           }
         }
       },
-      "SefinekBlocklistsApp/1.0.0": {
+      "SefinekBlocklistsApp/0.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -692,7 +692,7 @@
         "packageIcon.png"
       ]
     },
-    "SefinekBlocklistsApp/1.0.0": {
+    "SefinekBlocklistsApp/0.1.0": {
       "type": "project",
       "path": "../SefinekBlocklistsApp/SefinekBlocklistsApp.csproj",
       "msbuildProject": "../SefinekBlocklistsApp/SefinekBlocklistsApp.csproj"
@@ -701,7 +701,7 @@
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.19041": [
       "Microsoft.Windows.SDK.BuildTools >= 10.0.22621.756",
-      "SefinekBlocklistsApp >= 1.0.0"
+      "SefinekBlocklistsApp >= 0.1.0"
     ]
   },
   "packageFolders": {
