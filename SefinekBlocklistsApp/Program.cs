@@ -11,7 +11,7 @@ internal static class Program
 	[STAThread]
 	private static void Main()
 	{
-		InitializeApplication();
+		ApplicationConfiguration.Initialize();
 
 		try
 		{
@@ -21,11 +21,5 @@ internal static class Program
 		{
 			Utils.ShowErrorMessage($"Sorry, but something went wrong.\n\n{ex.Message}");
 		}
-	}
-
-	private static void InitializeApplication()
-	{
-		ApplicationConfiguration.Initialize();
-		Application.SetHighDpiMode(HighDpiMode.PerMonitorV2);
 	}
 }
