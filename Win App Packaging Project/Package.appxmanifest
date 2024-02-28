@@ -9,7 +9,7 @@
   <Identity
     Name="21936Sefinek.503172E9D7F8E"
     Publisher="CN=Sefinek"
-    Version="1.0.0.0" />
+    Version="1.0.1.0" />
 
   <Properties>
     <DisplayName>Sefinek Blocklists</DisplayName>
